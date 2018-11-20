@@ -1,0 +1,68 @@
+
+.component-cnt {
+	outline: 1px solid green;
+}
+
+.table {
+	/*outline: 1px solid red;*/
+	margin-top: 10px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+	background: #FFFFFF;
+}
+
+thead {
+	background: #CCCCCC;
+}
+
+thead th:nth-child(1) {
+		width: 60%;
+
+}
+
+thead th:nth-child(2) {
+	width: 20%;
+}
+
+thead th:nth-child(3) {
+	width: 20%;
+}
+
+tbody tr:nth-child(odd) {
+	background: #E5E5E5;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.paginator {
+	outline: 1px solid red;
+	width: 100%;
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.paginator__pages {
+	display: flex;
+	align-items: center;
+}
+
+.paginator__pages__text {
+	outline: 1px solid orange;
+}
+
+.paginator__pages__list {
+	margin: 0;
+	outline: 1px solid blue;
+	list-style: none;
+}
+
+.paginator__pages__list__item:hover {
+	cursor: pointer;
+}

@@ -1,0 +1,39 @@
+
+<div class="component-cnt">
+
+	<table class="table" *ngIf="renderTable()">
+		<thead>
+			<tr>
+				<th>{{titles.name}}</th>
+				<th>{{titles.price}}</th>
+				<th>{{titles.quantity}}</th>
+			</tr>
+		</thead>
+		<tbody *ngFor="let product of productsToShow[currPage]">
+			<tr (click)="displaySelectedProd($event, product)">
+				<td>{{product[1]}}</td>
+				<td>{{product[2]}}</td> 
+				<td>{{product[3]}}</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<div class="paginator">
+
+		<span class="paginator__text">Products per page</span>
+
+		<input class="paginator__input-text" type="text" value="{{productsPerPage}}" (change)="setProdToShowNumber()">
+
+		<div class="paginator__pages">
+
+			<span class="paginator__text paginator__pages__text">Page</span>
+
+			<ul class="paginator__pages__list" *ngFor="let page of pages">
+				<li class="paginator__pages__list__item" (click)="selectPage($event)">{{page}}</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+</div>

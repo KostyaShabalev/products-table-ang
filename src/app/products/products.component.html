@@ -1,0 +1,13 @@
+
+
+<app-dataset-options></app-dataset-options>
+
+<app-table
+	[products]="products"
+	[titles]="tableTitles"
+	(throwSelectedProduct)="displayProdInfo($event)"></app-table>
+
+<div class="selected-product" *ngIf="selectedProductInfo">
+	<span>Selected: {{selectedProductInfo[1]}} ({{selectedProductInfo[2]}}, {{selectedProductInfo[3]}})</span>
+</div>
+
